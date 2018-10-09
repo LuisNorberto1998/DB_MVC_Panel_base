@@ -80,7 +80,7 @@ public class ModelAgenda {
             email = rs.getString("email");
             telefono = rs.getString("telefono");
         } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error model 102: " + err.getMessage());
+            JOptionPane.showMessageDialog(null, "Error ModelAgenda 002: " + err.getMessage());
 
         }
     }
@@ -96,7 +96,7 @@ public class ModelAgenda {
             rs.first();
             setValues();
         } catch (SQLException sql) {
-            JOptionPane.showMessageDialog(null, "Error ModelAgenda 004: " + sql.getMessage());
+            JOptionPane.showMessageDialog(null, "Error ModelAgenda 003: " + sql.getMessage());
         }
     }
 
@@ -108,6 +108,16 @@ public class ModelAgenda {
      */
     public void moverSiguienteRegistro() {
         System.out.println("moverSiguienteRegistro");
+        try {
+            if (!rs.isLast()) {
+                rs.next();
+                setValues();
+                System.out.print("Programa accion moverSiguienteRegistro");
+            }
+
+        } catch (SQLException sql) {
+            JOptionPane.showMessageDialog(null, "Error ModelAgenda 004: " + sql.getMessage());
+        }
     }
 
     /**
