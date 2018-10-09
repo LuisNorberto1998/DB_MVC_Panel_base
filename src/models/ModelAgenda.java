@@ -24,6 +24,7 @@ public class ModelAgenda {
 
     private String nombre;
     private String email;
+    private String telefono;
 
     public String getNombre() {
         return nombre;
@@ -40,6 +41,14 @@ public class ModelAgenda {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+     public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
 
     /**
      * Método que realiza las siguietnes acciones: 1- Conecta con la base
@@ -49,7 +58,7 @@ public class ModelAgenda {
      */
     public void conectarDB() {
         try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3309/agenda_mvc", "user_mvc", "pass_mvc.2018");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/agenda_mvc", "user_mvc", "pass_mvc.2018");
             st = conexion.createStatement();
             String sql = "SELECT * FROM contactos;";
             System.out.println(sql);
@@ -112,4 +121,6 @@ public class ModelAgenda {
     public void moverUltimoRegistro() {
         System.out.println("moverUltimoRegistro");
     }
+
+   
 }

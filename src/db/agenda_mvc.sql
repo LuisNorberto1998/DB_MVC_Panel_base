@@ -5,14 +5,15 @@ USE agenda_mvc;
 CREATE TABLE contactos( 
     id_contacto integer NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre varchar(50) NOT NULL,
-    email varchar(50) NOT NULL
+    email varchar(50) NOT NULL,
+    telefono varchar(11) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 INSERT INTO contactos (nombre, email) VALUES 
-('Dejah Thoris','dejah@barson.ma'), 
-('Jhon Carter','jhon@barson.ma'),
-('Carthoris Carter','carthoris@barson.ma');
+('Dejah Thoris','dejah@barson.ma', '7751525781'), 
+('Jhon Carter','jhon@barson.ma', '7751593572'),
+('Carthoris Carter','carthoris@barson.ma','7754567891');
 
 
 SELECT * FROM contactos;
