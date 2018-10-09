@@ -146,6 +146,12 @@ public class ModelAgenda {
      */
     public void moverUltimoRegistro() {
         System.out.println("moverUltimoRegistro");
+        try {
+            rs.last();
+            setValues();
+        } catch (SQLException sql) {
+            JOptionPane.showMessageDialog(null, "Error ModelAgenda 006: " + sql.getMessage());
+        }
     }
 
 }
