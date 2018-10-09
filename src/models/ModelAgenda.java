@@ -41,8 +41,8 @@ public class ModelAgenda {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-     public String getTelefono() {
+
+    public String getTelefono() {
         return telefono;
     }
 
@@ -128,6 +128,15 @@ public class ModelAgenda {
      */
     public void moverAnteriorRegistro() {
         System.out.println("moverAnteriorRegistro");
+        try {
+            if (!rs.isFirst()) {
+                rs.previous();
+                setValues();
+                System.out.print("Programa accion moverAnteriorRegistro");
+            }
+        } catch (SQLException sql) {
+            JOptionPane.showMessageDialog(null, "Error ModelAgenda 005: " + sql.getMessage());
+        }
     }
 
     /**
@@ -139,5 +148,4 @@ public class ModelAgenda {
         System.out.println("moverUltimoRegistro");
     }
 
-   
 }
