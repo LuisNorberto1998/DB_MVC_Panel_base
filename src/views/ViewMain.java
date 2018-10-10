@@ -41,7 +41,7 @@ public class ViewMain extends javax.swing.JFrame {
         jmi_agenda.setText("Agenda");
         jMenu1.add(jmi_agenda);
 
-        jmi_detalle_contacto.setText("Detalle Cotacto");
+        jmi_detalle_contacto.setText("Detalle Contacto");
         jMenu1.add(jmi_detalle_contacto);
         jMenu1.add(jSeparator1);
 

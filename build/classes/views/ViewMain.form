@@ -19,7 +19,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jmi_detalle_contacto">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Detalle Cotacto"/>
+                <Property name="text" type="java.lang.String" value="Detalle Contacto"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
